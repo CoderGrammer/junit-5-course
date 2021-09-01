@@ -13,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
   - Is even more restrictive than protected
   - But remember in Java top level classes can only be public or default (no modifier)
   - Another good thing about this is less boilerplate
+  - Notice the class name ends in 'Test'
+  - This is not essential but advisable - we will cover why later on
 */
 class _10_AnatomyOfATest {
 
@@ -43,16 +45,28 @@ class _10_AnatomyOfATest {
     }
 
     /*
+     - An example failing test
+    */
+    @Test
+    void failing() {
+        Assertions.assertEquals("a", "not-a");
+        // We get the gist of the problem
+        // but not a huge about of context if it were needed...
+    }
+
+    /*
      - Having a message
         - Only displayed when there is a failure
         - Ideally something that explains what went wrong
+        - But with added context
     */
     @Test
     void assertionWithAMessage() {
         var expected = "Expected";
         var actual = "Actual";
+        // Not massively useful example:
         assertEquals(expected, actual, "Doh! The expected did not match the actual!");
-        // Can be helpful to include useful params
+        // Can be helpful to include useful params / context
         // But don't forget the assertion failure will detail the discrepancy usually
         assertEquals(expected, actual, String.format("This failure may be caused by %s being corrupted", actual));
     }
