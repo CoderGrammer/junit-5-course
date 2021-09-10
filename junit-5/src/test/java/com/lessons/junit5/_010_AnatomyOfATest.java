@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
   - Notice the class name ends in 'Test'
   - This is not essential but advisable - we will cover why later on
 */
-class _10_AnatomyOfATest {
+class _010_AnatomyOfATest {
 
     /*
      - Notice no access modifier here too - same applies
