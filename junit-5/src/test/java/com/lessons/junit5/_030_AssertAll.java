@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class _30_AssertAll {
+public class _030_AssertAll {
 
     /*
      - In the past with JUnit 4 if you had a test with multiple assertions
