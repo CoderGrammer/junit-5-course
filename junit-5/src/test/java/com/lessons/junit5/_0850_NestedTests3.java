@@ -12,15 +12,16 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
 
-public class _0850_NestedTests3 {
-
-    // ######## lifecycle / questions
+/*
+ - Let's talk about lifecycle (setup/teardown) methods in more detail
+*/
+class _0850_NestedTests3 {
 
     @BeforeAll
-    static void preSetup() { print("A"); }
+    static void preSetup() { }
 
     @BeforeEach
-    void setup() { print("B"); }
+    void setup() { }
 
     @Nested
     class CarTests {
