@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class _020_AssertionsBasics {
+class _0200_AssertionsBasics {
 
     /*
      - First things first:

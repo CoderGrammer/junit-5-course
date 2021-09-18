@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
  - As part of ensuring some code behaves as we expect we may that it
  - throws the exceptions we expect
 */
-class _040_AssertExceptions {
+class _0400_AssertExceptions {
 
     // Assert an exception type
     @Test
