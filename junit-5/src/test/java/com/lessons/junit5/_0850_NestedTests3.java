@@ -117,7 +117,7 @@ class _0850_NestedTests3 {
     }
 
     /*
-     - Let's summarise the last part:
+     - Let's summarise:
         - If you want to use @BeforeAll in a @Nested class:
             - You need to use:
                 @TestInstance(PER_CLASS)

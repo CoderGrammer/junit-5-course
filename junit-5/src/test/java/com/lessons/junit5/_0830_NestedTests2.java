@@ -7,14 +7,24 @@ import org.junit.jupiter.api.Test;
 
 /*
  - Let's talk about lifecycle (setup/teardown) methods
+ - See the diagram on slide 2550
 */
 class _0830_NestedTests2 {
 
+    // The setup methods from parent classes are executed before nested ones
     @BeforeAll
     static void preSetup() { print("- A BeforeAll Outer"); }
 
+    // You can have more than one
+    @BeforeAll
+    static void preSetup2() { print("- AA BeforeAll Outer"); }
+
     @BeforeEach
     void setup() { print("- B BeforeEach Outer"); }
+
+    // You can have more than one
+    @BeforeEach
+    void setup2() { print("- BB BeforeEach Outer"); }
 
     @Nested
     class CarTests {
