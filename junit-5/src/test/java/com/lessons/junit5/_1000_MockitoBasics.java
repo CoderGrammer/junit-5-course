@@ -26,7 +26,7 @@ class _1000_MockitoBasics {
     static class Emailer {
 
         void emailCustomerAccountCreated(String name) {
-            print("Emailing...");
+            print("Emailing..." + name);
         }
 
     }
@@ -78,7 +78,7 @@ class _1000_MockitoBasics {
         ArgumentCaptor<String> a = ArgumentCaptor.forClass(String.class);
         Mockito.verify(email).emailCustomerAccountCreated(a.capture());
         Assertions.assertEquals("Joe", a.getValue());
-        Assertions.assertTrue(true);
+        Assertions.assertTrue(created);
     }
 
     // First lets try the 'false' case - failed credit check

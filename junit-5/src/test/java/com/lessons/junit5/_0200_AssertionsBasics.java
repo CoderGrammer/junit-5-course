@@ -41,6 +41,11 @@ class _0200_AssertionsBasics {
     }
 
     /*
+     - We could, static import all assertions:
+        - import static org.junit.jupiter.api.Assertions.*;
+    */
+
+    /*
      - It's worth exploring the variety of assertion methods available
     */
     @Test

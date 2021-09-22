@@ -17,7 +17,13 @@ class _0400_AssertExceptions {
                 () -> { throw new RuntimeException(); }); // Notice you need curly braces
     }
 
-    // Assert exception type and message
+    /*
+     - Assert exception type and message
+     - But this time notice the use of the 'method reference'
+     - Just think of it as an abbreviated lambda
+     - Where a lambda calls one method
+     - It can be replaced with a method reference if the number of arguments match
+    */
     @Test
     void throwyWithMessage() {
         Assertions.assertThrows(

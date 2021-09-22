@@ -55,6 +55,14 @@ class _0100_AnatomyOfATest {
     }
 
     /*
+     - The absence of a failure is a pass!
+        - You would normally see a passing assertion
+        - But technically this is sufficient
+    */
+    @Test
+    void passing() { }
+
+    /*
      - Having a message
         - Only displayed when there is a failure
         - Ideally something that explains what went wrong
