@@ -3,6 +3,8 @@ package com.lessons.junit5;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.stream.Stream;
+
 /*
  - As part of ensuring some code behaves as we expect we may that it
  - throws the exceptions we expect
