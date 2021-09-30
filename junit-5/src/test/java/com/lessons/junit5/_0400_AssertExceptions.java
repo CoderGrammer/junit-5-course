@@ -3,10 +3,8 @@ package com.lessons.junit5;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.stream.Stream;
-
 /*
- - As part of ensuring some code behaves as we expect we may that it
+ - As part of ensuring some code behaves as we expect we may test that it
  - throws the exceptions we expect
 */
 class _0400_AssertExceptions {
@@ -40,7 +38,7 @@ class _0400_AssertExceptions {
     @Test
     void throwyWithExpensiveMessage() {
         Assertions.assertThrows(
-                RuntimeException.class, this::throwing, () -> "Something awful happened");
+                RuntimeException.class, this::throwing, () -> fetchComplexMessage());
     }
 
     // Get a handle on the exception to check for anything else
@@ -77,6 +75,7 @@ class _0400_AssertExceptions {
         - We can use this method of asserting exceptions for both checked and unchecked exceptions
         - We can assert the type and the message
         - And if we want to test more such as additional members of a custom exception we can get a handle on it
+        - As the assertion method assertThrows returns a handle to the exception
         - The normal Java type hierarchies apply, so if you verify a parent type, of an exception it will pass
         - There are a few overloaded variations of assertThrows so check which fits your requirement best!
     */
@@ -102,3 +101,51 @@ class _0400_AssertExceptions {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     - Questions:
+         - 1. When testing exceptions you cannot use lambdas. True/False
+         - 2. To test for exception you need to use @ExceptionTest annotation. True/False
+         - 3. How can we get a handle on the exception to perform further checks on it?
+         - Scroll down for answers
+    */
+
+
+
+
+
+
+
+
+
+
+    /*
+     - Answers:
+         - 1. When testing exceptions you cannot use lambdas. True/False
+            - Yes you can. It is the preferred way to implement the Executable interface
+         - 2. To test for exception you need to use @ExceptionTest annotation. True/False
+            - Nope. @Test with the assertThrows method is sufficient
+         - 3. How can we get a handle on the exception to perform further checks on it?
+            - It is returned from the assertThrows method
+    */

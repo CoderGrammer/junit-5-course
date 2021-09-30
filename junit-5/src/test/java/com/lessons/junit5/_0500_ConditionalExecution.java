@@ -14,7 +14,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /*
- - You don't want all tests to run all the time!
+ - You don't want ALL tests to run ALL the time!
+    - Life's too short for that!
     - 'Conditional Execution' to the rescue...
 */
 class _0500_ConditionalExecution {
@@ -43,9 +44,7 @@ class _0500_ConditionalExecution {
         return true;
     }
 
-    /*
-     - You can optionally use the ExtensionContext
-    */
+    // You can optionally use the ExtensionContext
     public boolean customMethod2(ExtensionContext ex) {
         return ex.getConfigurationParameter("x")
                 .filter(y -> y.equals("runAll"))
@@ -116,3 +115,39 @@ class _0500_ConditionalExecution {
     }
 
 }
+
+
+
+
+
+
+
+
+
+    /*
+     - Questions:
+         - 1. Using @Ignored we can deactivate some tests without deleting them. True/False
+         - 2. You can enable some tests conditionally with @EnabledIf annotation. True/False
+         - 3. Only one condition can be applied to a test method. True/False
+         - Scroll down for answers
+    */
+
+
+
+
+
+
+
+
+
+
+    /*
+     - Answers:
+         - 1. Using @Ignored we can deactivate some tests without deleting them. True/False
+            False. @Disabled
+         - 2. You can enable some tests conditionally with @EnabledIf annotation. True/False
+            True
+         - 3. Only one condition can be applied to a test method. True/False
+            False. We demonstrated that with our composed annotation
+    */
+

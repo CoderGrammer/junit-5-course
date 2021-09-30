@@ -1,5 +1,6 @@
 package com.lessons.junit5;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
@@ -13,18 +14,21 @@ class _0830_NestedTests2 {
 
     // The setup methods from parent classes are executed before nested ones
     @BeforeAll
-    static void preSetup() { print("- A BeforeAll Outer"); }
+    static void preSetup() { print("-- A BeforeAll"); }
 
     // You can have more than one
     @BeforeAll
-    static void preSetup2() { print("- AA BeforeAll Outer"); }
+    static void preSetup2() { print("-- AA BeforeAll"); }
 
     @BeforeEach
-    void setup() { print("- B BeforeEach Outer"); }
+    void setup() { print("-- -- B BeforeEach"); }
 
     // You can have more than one
     @BeforeEach
-    void setup2() { print("- BB BeforeEach Outer"); }
+    void setup2() { print("-- -- BB BeforeEach"); }
+
+    @AfterAll
+    static void tear() { print("-- A AfterAll"); }
 
     @Nested
     class CarTests {
@@ -37,19 +41,19 @@ class _0830_NestedTests2 {
         // static void preSetup() { }
 
         @BeforeEach
-        void setup() { print("----- C BeforeEach Middle"); }
+        void setup() { print("-- -- -- C BeforeEach"); }
 
         @Test
-        void lightsOn() { }
+        void lightsOn() { print("-- -- -- <LIGHTS ON>"); }
 
         @Nested
         class ElectricCars {
-            @Test void powerUp() { }
+            @Test void powerUp() { print("-- -- -- -- -- -- <ELECTRIC POWER UP>");  }
         }
 
         @Nested
         class PetrolCars {
-            @Test void startEngine() { }
+            @Test void startEngine() { print("-- -- -- -- -- -- <PETROL START ENGINE>");  }
         }
 
     }

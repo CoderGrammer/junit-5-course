@@ -9,6 +9,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/*
+ - Some of this was covered in the previous section
+    - But as we are talking about assertions we may recap a little
+*/
 class _0200_AssertionsBasics {
 
     /*
@@ -43,6 +47,7 @@ class _0200_AssertionsBasics {
     /*
      - We could, static import all assertions:
         - import static org.junit.jupiter.api.Assertions.*;
+        - But some IDEs make light work of it anyway
     */
 
     /*
@@ -67,3 +72,36 @@ class _0200_AssertionsBasics {
     }
 
 }
+
+
+
+
+
+
+
+    /*
+     - Questions:
+         - 1. How can you import all the static methods from the Assertions class?
+         - 2. Why would you use a lambda for a custom failure message?
+         - Scroll down for answers
+    */
+
+
+
+
+
+
+
+
+
+
+    /*
+     - Answers:
+         - 1. How can you import all the static methods from the Assertions class?
+            - Using import static org.junit.jupiter.api.Assertions.*;
+         - 2. Why would you use a lambda for a custom failure message?
+            - Because lambdas have the benefit of being lazy evaluated, so it could improve performance
+    */
+
+
+

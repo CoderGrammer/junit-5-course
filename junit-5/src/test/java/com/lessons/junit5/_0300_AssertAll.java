@@ -10,7 +10,7 @@ class _0300_AssertAll {
     /*
      - In the past with JUnit 4 if you had a test with multiple assertions
      - If any of them fail the rest are not even checked
-     - Now we have a solution to this problem
+     - Now we have a built-in solution to this problem
     */
 
     @Test
@@ -51,10 +51,12 @@ class _0300_AssertAll {
         /*
          - In this example we have an assertAll but there is only one lambda
          - Therefore it is pointless
+         - assertAll collates all top level lambdas
+         - but there is only one here!
          - The individual assertion failures will not be collated
         */
         assertAll(() -> { // Note this is a multiline lambda
-                      assertTrue(true);
+                      assertTrue(false); // What happens when we change this to false? Remember it's a single lambda
                       assertAll(
                               () -> assertTrue(false),
                               () -> assertTrue(false),
@@ -90,10 +92,54 @@ class _0300_AssertAll {
                         () -> assertTrue(false, "7"),
                         () -> assertTrue(false, "8")));
     }
+
     /*
      - You don't need to remember all these permutations
      - Just be aware that you have options to build up your assertions as it
      - makes sense for your use case
+     - but it usually makes sense to err on the side of simplicity
     */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     - Questions:
+         - 1. assertAll will collate all assertions that appear underneath it? True/False
+         - 2. assertAll must specify a unique group for each group of assertions? True/False
+         - Scroll down for answers
+    */
+
+
+
+
+
+
+
+
+
+
+    /*
+     - Answers:
+         - 1. assertAll will collate all assertions that appear underneath it? True/False
+            False
+         - 2. assertAll must specify a unique group for each group of assertions? True/False
+            False
+    */

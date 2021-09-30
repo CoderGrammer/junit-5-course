@@ -146,3 +146,46 @@ class _0600_DisplayNames {
     */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     - Questions:
+         - 1. @DisplayName can be combined with @Test with @DisplayNameTest. True/False
+         - 2. Emojis can now be used in display names. True/False
+         - 3. Adding a @DisplayName annotation to your test method is optional. True/False
+         - 4. You can create your own custom display name generator. True/False
+         - Scroll down for answers
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     - Answers:
+         - 1. @DisplayName can be combined with @Test with @DisplayNameTest. True/False
+            False
+         - 2. Emojis can now be used in display names. True/False
+            True
+         - 3. Adding a @DisplayName annotation to your test method is optional. True/False
+            True
+         - 4. You can create your own custom display name generator. True/False
+            True
+    */
+

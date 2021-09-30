@@ -8,18 +8,21 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /*
  - Notice the class is not public!
+  - This was not possible for tests before JUnit 5 - they had to be public
   - Generally considered better to have things as private as possible
   - no modifier - aka - package-private
   - Is even more restrictive than protected
   - But remember in Java top level classes can only be public or default (no modifier)
   - Another good thing about this is less boilerplate
   - Notice the class name ends in 'Test'
-  - This is not essential but advisable - we will cover why later on
+  - This is not essential but advisable - some tools may expect it to end in Test
+  - So the build etc. can sometimes need tweaking if you don't end with Test
 */
 class _0100_AnatomyOfATest {
 
     /*
      - Notice no access modifier here too - same applies
+     - Can also be protected
     */
     @Test
     void myDumbTest() {
@@ -78,5 +81,52 @@ class _0100_AnatomyOfATest {
         // But don't forget the assertion failure will detail the discrepancy usually
         assertEquals(expected, actual, String.format("This failure may be caused by %s being corrupted", actual));
     }
+
+
+
+
+
+
+    /*
+     - Questions:
+         - 1. Can a top level unit test classes be marked as protected access?
+         - 2. Can test methods be marked public?
+         - 3. Can test methods be marked private?
+         - 4. Which is the correct JUnit 5 assertions class?
+                a. org.junit.Assert
+                b. org.junit.jupiter.api.Assertions
+         - 5. A test with no assertions that throws no exceptions is a failing test?
+                True/False
+         - Scroll down for answers
+    */
+
+
+
+
+
+
+
+
+
+
+    /*
+     - Answers:
+         - 1. Can top level unit test classes be marked as protected access?
+            Nope - But nested tests can be
+         - 2. Can test methods be marked public?
+            Yes
+         - 3. Can test methods be marked private?
+            Nope
+         - 4. Which is the correct JUnit 5 assertions class?
+                a. org.junit.Assert
+                b. org.junit.jupiter.api.Assertions
+            b
+         - 5. A test with no assertions that throws no exceptions is a failing test?
+                True/False
+            False
+    */
+
+
+
 
 }
