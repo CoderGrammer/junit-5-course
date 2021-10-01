@@ -22,9 +22,7 @@ class _0600_DisplayNames {
     @Test
     void accountCreation() { }
 
-    /*
-     - Well, now we can have expressive display names!
-    */
+    // Well, now we can have expressive display names!
     @Test
     // Here we use 'GIVEN, WHEN, THEN' but you can say whatever you want
     @DisplayName("Given that all credit checks have passed when the user clicks " +
@@ -35,7 +33,7 @@ class _0600_DisplayNames {
 
     /*
      - Finally the feature you have all been waiting for...
-     - drum roll pls...
+     - ...drum roll pls...
      - EMOJI Support...
      - On a Mac you can get emojis by pressing Ctrl+CMD+Space
      - This is mainly because JUnit 5 wanted to support Unicode so this is a nice byproduct
@@ -47,7 +45,6 @@ class _0600_DisplayNames {
     @Test
     void withEmojis() { }
 
-    //
     /*
      - How about some different generators?
      - Note these are applied at the class level
@@ -159,7 +156,7 @@ class _0600_DisplayNames {
 
     /*
      - Questions:
-         - 1. @DisplayName can be combined with @Test with @DisplayNameTest. True/False
+         - 1. @DisplayName can be combined with @Test to form @DisplayNameTest. True/False
          - 2. Emojis can now be used in display names. True/False
          - 3. Adding a @DisplayName annotation to your test method is optional. True/False
          - 4. You can create your own custom display name generator. True/False
@@ -179,7 +176,7 @@ class _0600_DisplayNames {
 
     /*
      - Answers:
-         - 1. @DisplayName can be combined with @Test with @DisplayNameTest. True/False
+         - 1. @DisplayName can be combined with @Test to form @DisplayNameTest. True/False
             False
          - 2. Emojis can now be used in display names. True/False
             True

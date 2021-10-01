@@ -71,8 +71,8 @@ class _0500_ConditionalExecution {
     /*
      - These can be used as meta annotations
         - Test with:
-            - my.env.var=end
-            - my.env.var=envA
+            - my.env.var=end (should not run)
+            - my.env.var=envA (should run)
     */
     @Test
     @EnabledIfEnvironmentVariable(named = "my.env.var", matches = "env.*")
