@@ -6,10 +6,14 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
 /*
- - Why do we even need Mockito?
+ - Mockito?
+    - A library that helps create mocks and related utilities
+ - Why do we need Mockito?
     - We only want to test the 'Unit'
     - Not the dependencies
-    - We need to be able to tweak the behaviour of dependencies as they can impact what our 'Unit' does
+    - We need to be able to tweak the behaviour of dependencies as they can impact what
+      our 'Unit' does
+    - And you could code your own mocks but Mockito really makes it very easy
 */
 class _1000_MockitoBasics {
 
@@ -31,7 +35,7 @@ class _1000_MockitoBasics {
 
     }
 
-    static class AccountService {
+    static class AccountService { // SUT - Subject under test
 
         CreditCheck creditCheck;
         Emailer emailer;

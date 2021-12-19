@@ -69,5 +69,5 @@ class _0900_ExtensionsBasics {
          - 3. All Extensions revolve around the unit test lifecycle. True/False
             False. Some are not lifecycle related such as Exception handling ones
           - 4. All extensions must implement the IExtension interface from JUnit. True/False
-            False. They must ultimately extend the Extension interface
+            False. They must ultimately implement the Extension interface
     */
