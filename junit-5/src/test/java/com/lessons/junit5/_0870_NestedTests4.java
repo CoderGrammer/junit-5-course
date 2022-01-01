@@ -15,7 +15,7 @@ class _0870_NestedTests4 {
         class Y {
 
             @Nested
-            class X {
+            class X   {
 
                 @Test
                 void a() { }
