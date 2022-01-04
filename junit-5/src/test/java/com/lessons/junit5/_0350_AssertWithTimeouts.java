@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
 import java.time.Duration;
-import java.time.temporal.TemporalUnit;
 import java.util.concurrent.TimeUnit;
 
 import static java.time.Duration.ofMillis;
@@ -20,12 +19,12 @@ import static java.time.Duration.ofSeconds;
  - Imagine you can add two numbers together with 100% accuracy
     - Great but if it takes an hour it's not much use is it!?
 */
-public class _350_AssertWithTimeouts {
+public class _0350_AssertWithTimeouts {
 
     // We expect that this work should complete within the specified time limit
     @Test
     void shouldNotTimeout() {
-        Assertions.assertTimeout(ofSeconds(10), () -> {
+        Assertions.assertTimeout(Duration.ofSeconds(10), () -> {
             System.out.println("hello");
         });
     }
@@ -87,7 +86,7 @@ public class _350_AssertWithTimeouts {
                 .assertTimeoutPreemptively(
                         Duration.ofMillis(1),
                         () -> {
-                            Thread.sleep(5000);
+                            Thread.sleep(10000);
                             System.out.println("I'm done");
                         }
                 );
@@ -110,8 +109,8 @@ public class _350_AssertWithTimeouts {
      - What about @Timeout annotation
         - Can be used on test factories, even lifecycle methods
         - And of course normal tests
-       - You can even declare it at the class level
-       - This is not 'preemptive'
+        - You can even declare it at the class level
+        - This is not 'preemptive'
     */
 
     @Test
@@ -121,6 +120,7 @@ public class _350_AssertWithTimeouts {
         Thread.sleep(100);
     }
 
+    @Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
     @Nested
     class TestClass {
 
