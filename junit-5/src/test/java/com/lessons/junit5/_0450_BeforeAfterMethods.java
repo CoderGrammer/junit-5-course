@@ -3,11 +3,10 @@ package com.lessons.junit5;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
-import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  - @BeforeEach, @BeforeAll, @AfterEach, @AfterAll
@@ -20,6 +19,8 @@ import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
         - This can also be referred to as 'tearing down' the setup or fixture
 */
 class _0450_BeforeAfterMethods {
+
+    List<String> customers = new ArrayList<>();
 
     /*
      - Let's take a look at BeforeAll and AfterAll first
@@ -34,6 +35,9 @@ class _0450_BeforeAfterMethods {
 
     @Test
     void passingTest() { }
+
+    @Test
+    void passingTest2() { }
 
     @AfterAll
     static void after() {

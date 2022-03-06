@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 /*
  - How about doing something before or after each test method executes?
- - BeforeEach and afterEach to the rescue...
+ - BeforeEach and AfterEach to the rescue...
 */
 class _0450_BeforeAfterMethods3 {
 
@@ -19,8 +19,11 @@ class _0450_BeforeAfterMethods3 {
         System.out.println("a");
     }
 
-    @Test
-    void passingTest() { }
+    // @Test
+    // void passingTest() { }
+    //
+    // @Test
+    // void passingTest2() { }
 
     // What about parameterized methods?
     // What do you think will happen?
